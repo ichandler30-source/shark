@@ -1,0 +1,12 @@
+---
+title: "Shark and Red Tide relationship"
+author: "Isabella Chandler"
+---
+
+Welcome! This website explores the relationship between coastal shark communities in South Florida and *Karenia brevis* harmful algal blooms (red tide), combining three public datasets:
+
+- **University of Miami Shark Surveys (2009–2021):** Standardized drumline catch, length/sex, and mark-recapture records from South Florida.
+- **Florida FWC Red Tide Monitoring (2007–Present):** Water quality and *Karenia brevis* cell count samples across Florida.
+- **NOAA HABSOS Archive:** Historical harmful algal bloom observations and environmental measurements across the Gulf of Mexico.
+
+Visit the [Data](analysis.qmd) page to see how these datasets are loaded into R.

@@ -1,0 +1,43 @@
+---
+title: "South Florida Sharks and Red Tide Data"
+format: html
+execute:
+  message: false
+  warning: false
+---
+
+```{r}
+#| label: setup
+library(tidyverse)
+```
+
+## 1. University of Miami Shark Survey Data
+
+```{r}
+#| label: load-sharks
+sharks_by_set <- read_csv("data/miami_sharks/SharksBySet.csv")
+shark_lengths <- read_csv("data/miami_sharks/TotalLengthAndSex.csv")
+shark_recaps  <- read_csv("data/miami_sharks/OriginalAndRecaptureLocations.csv")
+
+glimpse(sharks_by_set)
+```
+
+## 2. Florida FWC Red Tide Monitoring Data (2007–Present)
+
+```{r}
+#| label: load-fwc
+# List all FWC CSV files and read them into one combined tibble
+fwc_files <- list.files("data/fwc_redtide", pattern = "\\.csv$", full.names = TRUE)
+fwc_redtide <- read_csv(fwc_files, col_types = cols(TIME = col_character()))
+
+glimpse(fwc_redtide)
+```
+
+## 3. NOAA HABSOS Harmful Algal Bloom Data
+
+```{r}
+#| label: load-noaa
+noaa_habsos <- read_csv("data/noaa_habsos/noaa_habsos_cell_counts.csv")
+
+glimpse(noaa_habsos)
+```
